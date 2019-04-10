@@ -26,7 +26,8 @@ class MainActivity : AppCompatActivity() {
             .debounce(500, TimeUnit.MILLISECONDS)
             .observeOn(AndroidSchedulers.mainThread())
             .map { t ->
-              val isValid: Boolean = !t.isBlank() && Patterns.EMAIL_ADDRESS.matcher(t).matches()
+              val isValid: Boolean = !t.isBlank() && Patterns.
+                EMAIL_ADDRESS.matcher(t).matches()
               isValid
             },
           password.textChanges().skip(1)
